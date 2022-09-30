@@ -15,6 +15,9 @@ public class LoginPage extends BasePage {
     @FindBy(css = "button[color='#ffffff'] > span")
     private WebElement defaultLoginBtn;
 
+    @FindBy(css = "button[color='#ffffff']")
+    private WebElement loginButtonArea;
+
     @FindBy(css = "#email")
     private WebElement emailField;
 
@@ -38,10 +41,11 @@ public class LoginPage extends BasePage {
     }
 
     @Step("Perform a successful login")
-    public void login() {
+    public void login() throws InterruptedException {
         scrollIntoView(defaultLoginBtn);
         fillTextField(emailField, "email field", sensidev_userName);
         fillTextField(passwordField, "password field", sensidev_password);
+        Thread.sleep(5000);
         clickElement(defaultLoginBtn, "login button");
     }
 
