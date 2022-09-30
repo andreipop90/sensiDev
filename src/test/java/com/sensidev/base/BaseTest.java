@@ -29,9 +29,6 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
 
     @BeforeMethod(alwaysRun = true)
     protected void setUp() {
-        //Set parameters in BasePage to be used in page classes
-//        BasePage.env = env;
-//        BasePage.browser = browser;
         BasePage.sensidev_baseURL = sensidev_baseURL;
         BasePage.sensidev_userName = sensidev_userName;
         BasePage.sensidev_password = sensidev_password;
@@ -39,7 +36,6 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
         BasePage.wikiEN_baseURL = wikiEN_baseURL;
         BasePage.wikiDE_baseURL = wikiDE_baseURL;
 
-        //Instantiate driver and lunch browser
         driver = BrowserFactory.getDriver();
         driver.manage().window().maximize();
     }

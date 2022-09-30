@@ -8,7 +8,6 @@
         <property name="locations">
             <list>
                 <value>global.properties</value>
-<!--                <value>${env}.properties</value>-->
             </list>
 
         </property>

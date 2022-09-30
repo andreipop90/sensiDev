@@ -11,16 +11,6 @@ public class BrowserFactory {
 
     public static WebDriver getDriver() {
 
-//        WebDriverManager.chromedriver().setup();
-//        options.addArguments("--no-sandbox");
-//        options.addArguments("--disable-dev-shm-usage");
-//        options.addArguments("--disable-infobars");
-//        options.addArguments("--disable-gpu");
-//        options.addArguments("--verbose");
-//        options.addArguments("--whitelisted-ips");
-//        options.addArguments("--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36" + userAgentString);
-//        options.addArguments("--headless");
-//        options.setCapability("idleTimeout", 300);
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--enable-javascript");
